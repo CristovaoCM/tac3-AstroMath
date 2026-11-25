@@ -1,0 +1,31 @@
+import pygame
+from .constants import WIDTH, HEIGHT, TITLE, FPS
+
+class Display():
+    def __init__(self):
+        pass
+
+    def create_display(self):        
+        self.clock = pygame.time.Clock()  
+        self.size = (WIDTH, HEIGHT)
+        self.info = pygame.display.Info()
+        self.real_size = (self.info.current_w, self.info.current_h)
+
+        # define scale
+       
+        pygame.display.set_caption(TITLE)         
+        #flags = 0       
+        flags = pygame.SCALED | pygame.FULLSCREEN         
+        self.screen = pygame.display.set_mode(self.size, flags, display=0, vsync=1)
+                    
+        
+    def reload(self):
+        pass
+
+    def game_tick(self):
+        # Captura o dt
+        # Limita o FPS
+        self.delta_time = self.clock.tick_busy_loop(FPS) / 1000.0         
+
+
+display = Display()

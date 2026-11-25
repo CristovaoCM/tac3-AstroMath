@@ -1,0 +1,16 @@
+{
+    "nome": "Fase 1 - Soma Basica",
+    "operacoes": [
+        "+",
+        "-",
+        "*",
+        "/"
+    ],
+    "min_valor": 1,
+    "max_valor": 9,
+    "vel_min": 40.0,
+    "vel_max": 75.0,
+    "intervalo_spawn": 3.5,
+    "vidas": 3,
+    "meta_pontos": 10
+}
